@@ -11,7 +11,12 @@ import {
 } from "../spicedb-common/protodefs/developer/v1/developer_pb";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Editor, { DiffEditor, useMonaco } from "@monaco-editor/react";
+import Editor, { DiffEditor, useMonaco, loader } from "@monaco-editor/react";
+loader.config({
+  paths: {
+    vs: '/vs' // This path points to the /vs folder in your public directory
+  },
+});
 import lineColumn from "line-column";
 import monaco from "monaco-editor";
 import { useEffect, useMemo, useRef, useState } from "react";

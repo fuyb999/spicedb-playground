@@ -49,7 +49,7 @@ interface Crate {
 }
 
 // Copied from: https://github.com/widgetbot-io/crate/blob/master/src/util/cdn.ts#L3
-const CDN_URL = `https://cdn.jsdelivr.net/npm/@widgetbot/crate@3`;
+const CDN_URL = `../assets/crate.js`;
 
 // TODO: replace with a script loader
 const loadFromCDN = () =>

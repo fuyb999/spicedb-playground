@@ -15,9 +15,9 @@ ARG VITE_DISCORD_CHANNEL_ID=""
 ARG VITE_DISCORD_INVITE_URL="https://authzed.com/discord"
 ARG VITE_DISCORD_SERVER_ID=""
 
-RUN yarn install --frozen-lockfile --non-interactive --network-timeout 1000000
+#RUN yarn install --frozen-lockfile --non-interactive --network-timeout 1000000
 
-RUN yarn build
+RUN ls /app
 
 FROM $BASE_IMAGE AS playground-verifier
 
@@ -36,4 +36,5 @@ COPY ./contrib/nginx.conf.tmpl .
 COPY ./contrib/docker-entrypoint-wrapper.sh .
 RUN bash ./test-nginx-conf.sh
 
-COPY --from=playground-builder /app/build/ /usr/share/nginx/html/
+#COPY --from=playground-builder /app/build/ /usr/share/nginx/html/
+COPY build/ /usr/share/nginx/html/

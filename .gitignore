@@ -3,6 +3,5 @@ yarn-debug.log
 yarn-error.log
 spicedb
 zed
-build
 .vercel
 .env

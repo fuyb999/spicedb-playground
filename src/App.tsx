@@ -66,7 +66,7 @@ if (config.posthog.apiKey && config.posthog.host) {
 
 function App() {
   // Register GA hook.
-  useGoogleAnalytics(config.ga.measurementId);
+  // useGoogleAnalytics(config.ga.measurementId);
 
   const isEmbeddedPlayground = window.location.pathname.indexOf("/e/") >= 0;
   return (
