@@ -162,7 +162,7 @@ export function usePanelsCoordinator<L extends string>(
     // Try to parse from local storage.
     try {
       const foundState = JSON.parse(
-        localStorage.getItem(COORDINATOR_STATE_KEY) ?? "",
+        localStorage.getItem(COORDINATOR_STATE_KEY) ?? "{}",
       );
       if (
         "panelLocations" in foundState &&
